@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASYNCHRONISE function</title>
+</head>
+<body>
+    <!-- here we are calling ASYNCHRONISE function -->
+    <script>
+        function sum(a,b){
+
+            setTimeout(function(){
+
+                console.log(a+b)
+
+                return a+b
+
+
+
+            },1000)
+        }
+      let res =  sum(5,6)
+
+        square(res)    
+        function square(num){
+         console.log(num*num)
+       
+        }
+
+        //OUTPUT IS: NaN
+        //           11
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback function</title>
+</head>
+<body>
+    <script>
+        function sum(a,b,callnext){
+             setTimeout(function(){
+                let s = a+b
+                console.log(s)
+            //console.log(callnext(s))  
+            callnext(s)  
+               
+             },1000)
+
+
+        }
+      let res =  sum(5,6,square)
+
+//    let callnext =  function square(num){
+//           console.log(num*num)
+//        }
+//       // square(5) //square is not defined
+//        callnext(5)
+
+    function square(num){
+        // return num*num        //here return value stored into a variable(callnext)
+    console.log(num*num)  
+    }
+     
+
+    </script>
+</body>
+</html>
